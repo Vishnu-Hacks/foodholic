@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <base href="/">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="apple-touch-icon" sizes="76x76" href="assets/foodfront/img/apple-icon.png">
+    <link rel="icon" type="image/png" href="assets/foodfront/img/favicon.png">
+    <title>FoodHolic</title>
+
+    <!--     Fonts and icons     -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+    <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+    <!-- Nucleo Icons -->
+    <link href="assets/foodfront/css/nucleo-icons.css" rel="stylesheet">
+    <link href="assets/foodfront/css/nucleo-svg.css" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link href="assets/foodfront/css/font-awesome.css" rel="stylesheet">
+    <link href="assets/foodfront/css/nucleo-svg.css" rel="stylesheet">
+    <!-- CSS Files -->
+    <link href="assets/foodfront/css/argon-design-system.css" rel="stylesheet">
+    <!-- <link href="assets/argon/css/argon.css" rel="stylesheet"> -->
+    <!-- Custom CSS -->
+    <link type="text/css" href="assets/custom/css/custom.css" rel="stylesheet">
+    <!-- Select2 -->
+    <link type="text/css" href="assets/custom/css/select2.min.css" rel="stylesheet">
+    <style type="text/css">
+        /* Chart.js */
+        
+        @-webkit-keyframes chartjs-render-animation {
+            from {
+                opacity: 0.99
+            }
+            to {
+                opacity: 1
+            }
+        }
+        
+        @keyframes chartjs-render-animation {
+            from {
+                opacity: 0.99
+            }
+            to {
+                opacity: 1
+            }
+        }
+        
+        .chartjs-render-monitor {
+            -webkit-animation: chartjs-render-animation 0.001s;
+            animation: chartjs-render-animation 0.001s;
+        }
+    </style>
+</head>
+
+<body>
+    <app-root></app-root>
+    <!--   Core JS Files   -->
+    <script src="assets/foodfront/js/core/jquery.min.js" type="text/javascript"></script>
+    <script src="assets/foodfront/js/core/popper.min.js" type="text/javascript"></script>
+    <script src="assets/foodfront/js/core/bootstrap.min.js" type="text/javascript"></script>
+    <script src="assets/foodfront/js/plugins/perfect-scrollbar.jquery.min.js"></script>
+
+    <script src="assets/foodfront/js/plugins/bootstrap-switch.js"></script>
+
+    <script src="assets/foodfront/js/plugins/nouislider.min.js" type="text/javascript"></script>
+    <script src="assets/foodfront/js/plugins/moment.min.js"></script>
+    <script src="assets/foodfront/js/plugins/datetimepicker.js" type="text/javascript"></script>
+    <script src="assets/foodfront/js/plugins/bootstrap-datepicker.min.js"></script>
+
+    <script src="assets/foodfront/js/argon-design-system.js" type="text/javascript"></script>
+
+    <!-- Chart -->
+    <script src="assets/custom/js/Chartmin.js"></script>
+    <script src="assets/custom/js/Chartextension.js"></script>
+    <!-- SELECT2 -->
+    <script src="assets/custom/js/select2.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.0.13/dist/js/select2.min.js"></script>
+
+    <!-- Add to Cart   -->
+    <script src="assets/custom/js/cartFunctions.js"></script>
+    <!-- Cart custom sidemenu -->
+    <script src="assets/custom/js/cartSideMenu.js"></script>
+    <!-- Order JS -->
+    <script src="assets/custom/js/orders.js"></script>
+    <!-- Notify JS -->
+    <script src="assets/custom/js/notify.js"></script>
+    <script src="assets/custom/js/notify.min.js"></script>
+    <script>
+        var items = [];
+
+        function setCurrentItem(id) {
+            $('#modalTitle').text(items[id].name);
+            $('#modalName').text(items[id].name);
+            $('#modalPrice').html(items[id].price);
+            $('#modalID').text(items[id].id);
+            $("#modalImg").attr("src", items[id].image);
+            $('#modalDescription').html(items[id].description);
+            $('#productModal').modal('show');
+        }
+        items[27] = {
+            "name": "Burger",
+            "id": 27,
+            "price": "$8.99",
+            "image": "https:\/\/foodtiger.mobidonia.com\/uploads\/restorants\/c8d27bcc-54da-4c18-b8e6-f1414c71612c_large.jpg",
+            "description": "freshly baked brioche bread, 100% freshly ground beef Limousine, crispy bacon, melted cheddar, brewed in Skapto beer onion rings, homemade BBQ sauce"
+        };
+        items[67] = {
+            "name": "Pizza",
+            "id": 67,
+            "price": "$10.99",
+            "image": "https:\/\/foodtiger.mobidonia.com\/uploads\/restorants\/f71ae2d7-f24f-4e1b-9bdd-7ab7143ce3c8_large.jpg",
+            "description": "tomato sauce, mozzarella sabelli, cherry tomatoes, olives, pesto sauce, extra virgin olive oil"
+        };
+        items[81] = {
+            "name": "Burrito",
+            "id": 81,
+            "price": "$6.99",
+            "image": "https:\/\/foodtiger.mobidonia.com\/uploads\/restorants\/4384df9b-9656-49d1-bfc1-9b5e85e1193a_large.jpg",
+            "description": "pork roast, tortilla bread, rice, plate peppers, plate onion, red beans, mushrooms, spicy corn, tomatoes, iceberg, olives, yellow cheese, cream sauce, mayonnaise sauce or hot salad, if desired"
+        };
+        items[215] = {
+            "name": "Steaks",
+            "id": 215,
+            "price": "$7.99",
+            "image": "https:\/\/foodtiger.mobidonia.com\/uploads\/restorants\/3dfb1358-a853-4d7c-93f1-36eaf06ee2d7_large.jpg",
+            "description": "String cheese, bread crumbs, smoked paprika, egg"
+        };
+    </script>
+    <!-- <script>
+        //var months = ['Jan', 'Feb', 'Mar', 'Apr', 'May','Jun', 'Jul', 'Aug', 'Sep','Oct', 'Nov', 'Dec'];
+        var months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+
+        function monthNumToName(monthnum) {
+            return months[monthnum - 1] || ''
+        }
+
+        var monthLabels = [1, 2, 3, 4, 5, 6, 7];
+        var salesValue = [3157, 3304, 3719, 2238, 3226, 2610, 10134];
+        var totalOrders = [42, 44, 52, 34, 45, 37, 138];
+
+        for (var i = 0; i < monthLabels.length; i++) {
+            monthLabels[i] = monthNumToName(monthLabels[i])
+        }
+    </script> -->
+</body>
+
+</html>

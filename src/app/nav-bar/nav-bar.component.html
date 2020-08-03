@@ -1,0 +1,95 @@
+<!-- Navbar -->
+<nav id="navbar-main" class="navbar navbar-light navbar-expand-lg fixed-top">
+    <div class="container-fluid">
+        <a class="navbar-brand mr-lg-5" [routerLink]="['home']">
+            FOOD HOLIC
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar_global" aria-controls="navbar_global" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+        <div class="navbar-collapse collapse" id="navbar_global">
+            <div class="navbar-collapse-header">
+                <div class="row">
+                    <div class="col-6 collapse-brand">
+                        <a href="#">
+                            FOOHOLIC
+                        </a>
+                    </div>
+                    <div class="col-6 collapse-close">
+                        <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar_global" aria-controls="navbar_global" aria-expanded="false" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+              </button>
+                    </div>
+                </div>
+            </div>
+            <ul class="navbar-nav align-items-lg-center ml-lg-auto">
+                <ul class="navbar-nav navbar-nav-hover align-items-lg-center">
+                    <div *ngIf="logged === true; then mainpart else 
+                        elsepart ">
+                    </div>
+
+                    <ng-template #mainpart>
+                        <li class="nav-item dropdown">
+                            <a href="#" class="btn btn-neutral btn-icon web-menu" data-toggle="dropdown" role="button">
+                                <span class="btn-inner--icon">
+                                    <i class="fa fa-user mr-2"></i>
+                                </span>
+                                <span class="nav-link-inner--text">Client</span>
+                            </a>
+                            <a href="#" class="nav-link nav-link-icon mobile-menu" data-toggle="dropdown" role="button">
+                                <span class="btn-inner--icon">
+                                    <i class="fa fa-user mr-2"></i>
+                                </span>
+                                <span class="nav-link-inner--text">Client</span>
+                            </a>
+
+                            <div class="dropdown-menu">
+                                <a href="/profile" class="dropdown-item"><i class="fa fa-smile-o" aria-hidden="true"></i>
+                                    Profile</a>
+                                <hr class="my--1">
+                                <a href="/logout" class="dropdown-item"><i class="fa fa-sign-out" aria-hidden="true"></i>
+                                    Logout</a>
+                            </div>
+                        </li>
+                    </ng-template>
+
+                    <ng-template #elsepart>
+                        <li class="nav-item dropdown">
+                            <a routerLink="login" class="btn btn-neutral btn-icon web-menu btn-cart">
+                                <span class="btn-inner--icon">
+                                        <i class="fa fa-user mr-2"></i>
+                                    </span>
+                                <span class="nav-link-inner--text">Login</span>
+                            </a>
+                            <a routerLink="login" class="nav-link nav-link-icon mobile-menu">
+                                <span class="btn-inner--icon">
+                                        <i class="fa fa-user mr-2"></i>
+                                    </span>
+                                <span class="nav-link-inner--text">Login</span>
+                            </a>
+                        </li>
+                        <li class="web-menu">
+
+                            <a id="desCartLink" onclick="openNav()" class="btn btn-neutral btn-icon btn-cart" style="cursor:pointer;">
+                                <span class="btn-inner--icon">
+                                        <i class="fa fa-shopping-cart"></i>
+                                    </span>
+                                <span class="nav-link-inner--text">Cart</span>
+                            </a>
+
+                        </li>
+                        <li class="mobile-menu">
+                            <a id="mobileCartLink" onclick="openNav()" class="nav-link" style="cursor:pointer;">
+                                <i class="fa fa-shopping-cart"></i>
+                                <span class="nav-link-inner--text">Cart</span>
+                            </a>
+                        </li>
+                    </ng-template>
+
+                </ul>
+            </ul>
+        </div>
+    </div>
+</nav>
+<!-- End Navbar -->

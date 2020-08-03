@@ -1,0 +1,220 @@
+<div class="wrapper">
+    <div class="modal fade" id="productModal" z-index="9999" tabindex="-1" role="dialog" aria-labelledby="modal-form" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered modal-" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 id="modalTitle" class="modal-title"></h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body p-0">
+                    <div class="card bg-secondary shadow border-0">
+                        <div class="card-body px-lg-5 py-lg-5">
+                            <!--<div class="container">-->
+                            <div class="row">
+                                <div class="col-sm col-md col-lg col-lg text-center">
+                                    <img id="modalImg" src="" width="295px" height="200px">
+                                </div>
+                                <div class="col-sm col-md col-lg col-lg">
+                                    <!--<h5><a href=""><span  id="modalName"></span></a></h5>-->
+                                    <input id="modalID" type="hidden">
+                                    <span id="modalPrice" class="new-price"></span>
+                                    <p id="modalDescription"></p>
+                                    <div class="quantity-area">
+                                        <div class="form-group">
+                                            <label class="form-control-label" for="quantity">Quantity</label>
+                                            <input type="number" name="quantity" id="quantity" class="form-control form-control-alternative" placeholder="1" value="1" required="" autofocus="">
+                                        </div>
+                                        <div class="quantity-btn">
+                                            <div id="addToCart1">
+                                                <button class="btn btn-primary" onclick="openNav()">Add To
+                                                    Cart</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--</div>-->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section class="section-profile-cover section-shaped my-0 d-none d-md-none d-lg-block d-lx-block">
+        <div class="row">
+            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-7"></div>
+            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-10 my-10">
+                <!-- Circles background -->
+                <img class="bg-image" src="assets/default/cover.jpg" style="width: 100%;">
+
+            </div>
+        </div>
+    </section>
+    <section class="section">
+        <div class="container mt--350">
+        </div>
+    </section>
+
+    <section class="section section-lg pt-lg-0" id="restaurant-content" style="padding-top: 0px">
+        <div class="container container-restorant">
+            <div class="row">
+                <div class="col-md-4">
+                    <form>
+                        <div class="form-group">
+                            <div class="input-group mb-4">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text"><i class="ni ni-basket"></i></span>
+                                </div>
+                                <input name="q" class="form-control lg" value="" placeholder="Search" type="text">
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="col-md-4">
+                    <button type="submit" class="btn btn-danger">Find your meal</button>
+                </div>
+            </div>
+            <h1>Top Categories</h1>
+            <br>
+            <div class="row col-lg-10">
+                <div class="col-xl-3 col-lg-6 col-md-6 col-sm-6">
+                    <div class="strip">
+                        <figure>
+                            <a onclick="setCurrentItem(27)" href="javascript:void(0)"><img src="https://foodtiger.mobidonia.com/uploads/restorants/c8d27bcc-54da-4c18-b8e6-f1414c71612c_large.jpg" data-src="/default/restaurant_large.jpg" class="img-fluid lazy" alt=""></a>
+                        </figure>
+                        <span class="res_title"><b><a onclick="setCurrentItem(27)" href="javascript:void(0)">Burger</a></b></span><br>
+
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-6 col-md-6 col-sm-6">
+                    <div class="strip">
+                        <figure>
+                            <a onclick="setCurrentItem(67)" href="javascript:void(0)"><img src="https://foodtiger.mobidonia.com/uploads/restorants/f71ae2d7-f24f-4e1b-9bdd-7ab7143ce3c8_large.jpg" data-src="/default/restaurant_large.jpg" class="img-fluid lazy" alt=""></a>
+                        </figure>
+                        <span class="res_title"><b><a onclick="setCurrentItem(67)"
+                                    href="javascript:void(0)">Pizza</a></b></span><br>
+
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-6 col-md-6 col-sm-6">
+                    <div class="strip">
+                        <figure>
+                            <a onclick="setCurrentItem(81)" href="javascript:void(0)"><img src="https://foodtiger.mobidonia.com/uploads/restorants/4384df9b-9656-49d1-bfc1-9b5e85e1193a_large.jpg" data-src="/default/restaurant_large.jpg" class="img-fluid lazy" alt=""></a>
+                        </figure>
+                        <span class="res_title"><b><a onclick="setCurrentItem(81)" href="javascript:void(0)">Burrito</a></b></span><br>
+
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-6 col-md-6 col-sm-6">
+                    <div class="strip">
+                        <figure>
+                            <a onclick="setCurrentItem(215)" href="javascript:void(0)"><img src="https://foodtiger.mobidonia.com/uploads/restorants/3dfb1358-a853-4d7c-93f1-36eaf06ee2d7_large.jpg" data-src="/default/restaurant_large.jpg" class="img-fluid lazy" alt=""></a>
+                        </figure>
+                        <span class="res_title"><b><a onclick="setCurrentItem(215)" href="javascript:void(0)">Steaks</a></b></span><br>
+
+                    </div>
+                </div>
+            </div>
+            <h1>Popular Items</h1>
+            <br>
+            <div class="row col-lg-10">
+                <div class="col-xl-3 col-lg-6 col-md-6 col-sm-6">
+                    <div class="strip">
+                        <figure>
+                            <a onclick="setCurrentItem(27)" href="javascript:void(0)"><img src="https://foodtiger.mobidonia.com/uploads/restorants/c8d27bcc-54da-4c18-b8e6-f1414c71612c_large.jpg" data-src="/default/restaurant_large.jpg" class="img-fluid lazy" alt=""></a>
+                        </figure>
+                        <span class="res_title"><b><a onclick="setCurrentItem(27)" href="javascript:void(0)">Burger</a></b></span><br>
+
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-6 col-md-6 col-sm-6">
+                    <div class="strip">
+                        <figure>
+                            <a onclick="setCurrentItem(67)" href="javascript:void(0)"><img src="https://foodtiger.mobidonia.com/uploads/restorants/f71ae2d7-f24f-4e1b-9bdd-7ab7143ce3c8_large.jpg" data-src="/default/restaurant_large.jpg" class="img-fluid lazy" alt=""></a>
+                        </figure>
+                        <span class="res_title"><b><a onclick="setCurrentItem(67)"
+                                    href="javascript:void(0)">Pizza</a></b></span><br>
+
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-6 col-md-6 col-sm-6">
+                    <div class="strip">
+                        <figure>
+                            <a onclick="setCurrentItem(81)" href="javascript:void(0)"><img src="https://foodtiger.mobidonia.com/uploads/restorants/4384df9b-9656-49d1-bfc1-9b5e85e1193a_large.jpg" data-src="/default/restaurant_large.jpg" class="img-fluid lazy" alt=""></a>
+                        </figure>
+                        <span class="res_title"><b><a onclick="setCurrentItem(81)" href="javascript:void(0)">Burrito</a></b></span><br>
+
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-6 col-md-6 col-sm-6">
+                    <div class="strip">
+                        <figure>
+                            <a onclick="setCurrentItem(215)" href="javascript:void(0)"><img src="https://foodtiger.mobidonia.com/uploads/restorants/3dfb1358-a853-4d7c-93f1-36eaf06ee2d7_large.jpg" data-src="/default/restaurant_large.jpg" class="img-fluid lazy" alt=""></a>
+                        </figure>
+                        <span class="res_title"><b><a onclick="setCurrentItem(215)" href="javascript:void(0)">Steaks</a></b></span><br>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div id="cartSideNav" class="sidenav-cart sidenav-cart-close">
+        <div class="offcanvas-menu-inner">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <div class="minicart-content">
+                <div class="minicart-heading">
+                    <h4>Shopping Cart</h4>
+                </div>
+                <div class="searchable-container">
+                    <div id="cartList">
+                        <div class="items col-xs-12 col-sm-12 col-md-12 col-lg-12 clearfix">
+                            <div class="info-block block-info clearfix">
+                                <div class="square-box pull-left">
+                                    <img src="https:\/\/foodtiger.mobidonia.com\/uploads\/restorants\/f71ae2d7-f24f-4e1b-9bdd-7ab7143ce3c8_large.jpg" class="productImage" width="100" height="90" alt="">
+                                </div>
+                                <h6 class="product-item_title">Pizza</h6>
+                                <p class="product-item_quantity">4 x 8.6$</p>
+                                <ul class="pagination">
+                                    <li class="page-item">
+                                        <button onclick="decQuantity()" class="page-link" tabindex="-1">
+                                            <i class="ni ni-fat-delete"></i>
+                                        </button>
+                                    </li>
+                                    <li class="page-item">
+                                        <button class="page-link">
+                                            <i class="ni ni-fat-add"></i>
+                                        </button>
+                                    </li>
+                                    <li class="page-item">
+                                        <button class="page-link">
+                                            <i class="fa fa-trash"></i>
+                                        </button>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="totalPrices">
+                        <div class="card card-stats mb-4 mb-xl-0">
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col">
+                                        <!-- <span>Cart is empty!</span> -->
+                                        <span><strong>Subtotal:</strong></span>
+                                        <span><strong>10$</strong></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <br>
+                        <a routerLink="/checkout" class="btn btn-primary text-white">Checkout</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<app-footer></app-footer>

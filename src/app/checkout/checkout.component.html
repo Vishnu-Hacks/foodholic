@@ -1,0 +1,349 @@
+<section class="section-profile-cover section-shaped my-0 d-none d-md-none d-lg-block d-lx-block">
+    <div class="row">
+        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-7"></div>
+        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-10 my-10">
+            <!-- Circles background -->
+            <img class="bg-image" src="assets\default\cover.jpg" style="width: 100%;">
+
+        </div>
+    </div>
+</section>
+<section class="section">
+    <div class="container mt--350">
+    </div>
+</section>
+<section class="section">
+
+    <div class="container">
+
+        <div class="row">
+
+            <!-- Left part -->
+            <div class="col-md-7">
+
+                <!-- List of items -->
+                <div class="card card-profile shadow mt--300">
+                    <div class="px-4">
+                        <div class="mt-5">
+                            <h3>Items<span class="font-weight-light"></span></h3>
+                        </div>
+                        <!-- List of items -->
+                        <div id="cartList" class="border-top"><br>
+                            <div class="items col-xs-12 col-sm-12 col-md-12 col-lg-12 clearfix">
+                                <div class="info-block block-info clearfix">
+                                    <div class="square-box pull-left">
+                                        <figure><img src="https://foodtiger.mobidonia.com/uploads/restorants/cc167252-968b-4cf4-9964-86c6a5feba45_thumbnail.jpg" width="100" height="105" alt="" class="productImage"></figure>
+                                    </div>
+                                    <h6 class="product-item_title">Burrito</h6>
+                                    <p class="product-item_quantity">1 x $5.99</p>
+                                    <ul class="pagination">
+                                        <li class="page-item"><button tabindex="-1" class="page-link"><i
+                                                    class="ni ni-fat-delete"></i></button></li>
+                                        <li class="page-item"><button class="page-link"><i
+                                                    class="ni ni-fat-add"></i></button></li>
+                                        <li class="page-item"><button class="page-link"><i
+                                                    class="fa fa-trash"></i></button>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- End List of items -->
+                    </div>
+                </div>
+                <br>
+
+
+                <form id="order-form" role="form" method="post" action="#" autocomplete="off" enctype="multipart/form-data">
+                    <!-- Delivery method -->
+                    <div class="card card-profile shadow">
+                        <div class="px-4">
+                            <div class="mt-5">
+                                <h3>Delivery / Pickup<span class="font-weight-light"></span></h3>
+                            </div>
+                            <div class="card-content border-top">
+                                <br>
+
+                                <div class="custom-control custom-radio mb-3">
+                                    <input name="deliveryType" class="custom-control-input" id="deliveryTypeDeliver" type="radio" value="delivery" checked="" onclick="document.getElementById('delTime').style='display:block';document.getElementById('picTime').style='display:none';">
+                                    <label class="custom-control-label" for="deliveryTypeDeliver">Delivery</label>
+                                </div>
+                                <div class="custom-control custom-radio mb-3">
+                                    <input name="deliveryType" class="custom-control-input" id="deliveryTypePickup" type="radio" value="pickup" onclick="document.getElementById('delTime').style='display:none'; document.getElementById('picTime').style='display:block'">
+                                    <label class="custom-control-label" for="deliveryTypePickup">Pickup</label>
+                                </div>
+
+                            </div>
+                            <br>
+                            <br>
+                        </div>
+                    </div>
+                    <br>
+
+                    <!-- Delivery time slot -->
+                    <div class="card card-profile shadow">
+                        <div class="px-4">
+                            <div class="mt-5">
+                                <h3><span class="delTime" id="delTime" style="display: block;">Delivery time</span><span class="picTime" id="picTime" style="display: none;">Pickup time</span><span class="font-weight-light"></span></h3>
+                            </div>
+                            <div class="card-content border-top">
+                                <br>
+                                <select name="timeslot" id="timeslot" class="form-control" required="">
+                                    <option value="1050_1080">17:30 - 18:00</option>
+                                    <option value="1080_1110">18:00 - 18:30</option>
+                                    <option value="1110_1140">18:30 - 19:00</option>
+                                    <option value="1140_1170">19:00 - 19:30</option>
+                                    <option value="1170_1200">19:30 - 20:00</option>
+                                    <option value="1200_1230">20:00 - 20:30</option>
+                                    <option value="1230_1260">20:30 - 21:00</option>
+                                    <option value="1260_1290">21:00 - 21:30</option>
+                                    <option value="1290_1320">21:30 - 22:00</option>
+                                    <option value="1320_1350">22:00 - 22:30</option>
+                                    <option value="1350_1380">22:30 - 23:00</option>
+                                </select>
+                            </div>
+                            <br>
+                            <br>
+                        </div>
+                    </div>
+                    <br>
+                    <br>
+
+
+                    <!-- Restaurant -->
+                    <div class="card card-profile shadow">
+                        <div class="px-4">
+                            <div class="mt-5">
+                                <h3>Delivery Address<span class="font-weight-light"></span></h3>
+                            </div>
+                            <div class="card-content border-top">
+                                <br>
+                                <div class="row">
+                                    <p>
+                                        Cecilia Chapman<br> 711-2880, Nulla St.<br> Mankato Mississippi 96522
+                                        <br>(257)563-7401
+                                    </p>
+                                    <div class="align-self-end">
+                                        <a routerLink="#" class="btn btn-neutral btn-icon web-menu btn-cart mx-5">
+                                            <span class="btn-inner--icon">
+                                                <i class="fa fa-user mr-2"></i>
+                                            </span>
+                                            <span class="nav-link-inner--text">Edit Address</span>
+                                        </a>
+                                        <a routerLink="#" class="btn btn-neutral btn-icon web-menu btn-cart">
+                                            <span class="btn-inner--icon">
+                                                <i class="fa fa-user mr-2"></i>
+                                            </span>
+                                            <span class="nav-link-inner--text">Add New</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <br>
+                            <br>
+                        </div>
+                    </div>
+                    <br>
+                </form>
+            </div>
+
+
+            <!-- Right Part -->
+            <div class="col-md-5">
+
+                <!-- Payment -->
+                <div class="card card-profile shadow mt--300">
+                    <div class="px-4">
+                        <div class="mt-5">
+                            <h3>Checkout<span class="font-weight-light"></span></h3>
+                        </div>
+                        <div class="border-top">
+                            <!-- Price overview -->
+                            <div id="totalPrices">
+                                <div class="card card-stats mb-4 mb-xl-0">
+                                    <div class="card-body">
+                                        <div class="row">
+                                            <div class="col">
+                                                <!----><span><strong>Subtotal:</strong></span> <span class="ammount"><strong>$5.99
+                                                    </strong></span>
+                                                <!---->
+                                                <!----><br><br> <span><strong>TOTAL:</strong></span> <span class="ammount"><strong>$5.99</strong></span> <input type="hidden" id="tootalPricewithDeliveryRaw" value="5.99"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- End price overview -->
+
+                            <!-- Payment  Methods -->
+                            <div class="cards">
+                                <div class="card-body">
+                                    <div class="row">
+                                        <div class="col">
+
+                                            <!-- COD -->
+                                            <div class="custom-control custom-radio mb-3">
+                                                <input name="paymentType" class="custom-control-input" id="cashOnDelivery" type="radio" value="cod" checked="" onclick="document.getElementById('totalSubmitCOD').style = 'display: block'; document.getElementById('stripe-payment-form').style = 'display: none';">
+                                                <label class="custom-control-label" for="cashOnDelivery"><span
+                                                        class="delTime" style="display: none;">Cash on delivery</span>
+                                                    <span class="picTime" >Cash on
+                                                        pickup</span></label>
+                                            </div>
+
+                                            <!-- Errors on Stripe -->
+
+                                            <!-- STIPE CART -->
+                                            <div class="custom-control custom-radio mb-3">
+                                                <input name="paymentType" class="custom-control-input" id="paymentStripe" type="radio" value="stripe" onclick="document.getElementById('totalSubmitCOD').style = 'display: none'; document.getElementById('stripe-payment-form').style = 'display: block';">
+                                                <label class="custom-control-label" for="paymentStripe">Pay with
+                                                    card</label>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- END Payment -->
+
+
+                            <!-- Payment Actions -->
+
+                            <!-- COD -->
+                            <div class="text-center" id="totalSubmitCOD" style="display: block;">
+                                <a href="/order" type="submit" class="btn btn-success mt-4 paymentbutton" onclick="this.disabled=true;this.form.submit();" disabled="">Place order</a>
+                            </div>
+
+
+
+                            <!-- Stripe -->
+                            <!-- STRIPE -->
+                            <form action="#" method="post" id="stripe-payment-form" style="display: none;">
+
+                                <div style="width: 100%;" class="form-group">
+                                    <input name="name" id="name" type="text" class="form-control" placeholder="Name on card" value="client" required="">
+                                </div>
+
+                                <div class="form">
+                                    <div style="width: 100%;" #stripecardelement="" id="card-element" class="form-control StripeElement StripeElement--empty">
+                                        <input aria-hidden="true" aria-label=" " placeholder="Card Number                                                                        | CVV" autocomplete="false" maxlength="1" style="border: none; width: 100%;">
+                                    </div>
+                                    <!-- Used to display form errors. -->
+                                    <br>
+                                    <div class="" id="card-errors" role="alert">
+
+                                    </div>
+                                </div>
+                                <div class="text-center" id="totalSubmitStripe" style="display: block;">
+                                    <button id="totalPrice" type="submit" class="btn btn-success mt-4 paymentbutton" disabled="">Place stripe order</button>
+                                </div>
+
+                            </form>
+
+
+
+
+
+
+                            <!-- END Payment Actions -->
+
+
+
+                        </div>
+                        <br>
+                        <br>
+                    </div>
+                </div>
+                <br>
+
+
+
+            </div>
+        </div>
+
+
+    </div>
+    <div class="modal fade" id="modal-order-new-address" tabindex="-1" role="dialog" aria-labelledby="modal-form" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered modal-large" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class="modal-title" id="modal-title-notification">Add new address</h3>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body p-0">
+                    <div class="card bg-secondary shadow border-0">
+                        <div class="card-body px-lg-5 py-lg-5" id="new_address_checkout_body">
+                            <form role="form">
+                                <input type="hidden" name="_token" value="riu8RLRd8Yi2bAXSqSjmMwf5uviy4cUui9drhFZ8">
+                                <div class="form-group" id="new_address_checkout_holder">
+                                    <label class="form-control-label" for="new_address_checkout">Address</label>
+                                    <select class="form-control select2-hidden-accessible" id="new_address_checkout" data-select2-id="new_address_checkout" tabindex="-1" aria-hidden="true">
+                                    </select><span class="select2 select2-container select2-container--default form-control" dir="ltr" data-select2-id="1" style="width: 100%; padding-bottom: 35px;"><span
+                                            class="selection"><span class="select2-selection select2-selection--single"
+                                                role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="0"
+                                                aria-disabled="false"
+                                                aria-labelledby="select2-new_address_checkout-container"
+                                                style="border: 0px; margin-bottom: 10px;"><span
+                                                    class="select2-selection__rendered"
+                                                    id="select2-new_address_checkout-container" role="textbox"
+                                                    aria-readonly="true" style="color: rgb(136, 152, 170);"><span
+                                                        class="select2-selection__placeholder"></span></span><span class="select2-selection__arrow" role="presentation" style="top: 10px;"><b role="presentation"></b></span></span>
+                                    </span><span class="dropdown-wrapper" aria-hidden="true"></span></span>
+                                </div>
+
+                                <div class="form-group">
+                                    <div id="new_address_map" class="form-control" style="display: none;"></div>
+                                </div>
+
+                                <div id="address-info" style="display: none;">
+
+                                    <div class="row">
+                                        <div class="col">
+                                            <div class="form-group">
+                                                <input name="address" id="address" type="text" class="form-control" placeholder="Address" style="display: none;">
+                                            </div>
+                                            <div class="form-group">
+                                                <input name="address_number" id="address_number" type="text" class="form-control" placeholder="Address number">
+                                            </div>
+                                            <div class="form-group">
+                                                <input name="number_apartment" id="number_apartment" type="text" class="form-control" placeholder="Aparment number">
+                                            </div>
+                                            <input type="hidden" id="lat" name="lat">
+
+                                        </div>
+                                        <div class="col">
+                                            <div class="form-group">
+                                                <input name="number_intercom" id="number_intercom" type="text" class="form-control" placeholder="Intercom">
+                                            </div>
+                                            <div class="form-group">
+                                                <input name="floor" id="floor" type="text" class="form-control" placeholder="Floor">
+                                            </div>
+                                            <div class="form-group">
+                                                <input name="entry" id="entry" type="text" class="form-control" placeholder="Entry number">
+                                            </div>
+                                            <input type="hidden" id="lng" name="lng">
+                                        </div>
+                                    </div>
+
+
+
+
+                                </div>
+                            </form>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="modal-footer">
+
+                    <button type="button" class="btn btn-link" data-dismiss="modal">Close</button>
+                    <button type="button" id="submitNewAddress" onclick="this.disabled=true;this.form.submit();" class="btn btn-outline-success" style="display: none;">Save</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</section>
+<app-footer></app-footer>
