@@ -1,317 +1,341 @@
 <nav class="navbar navbar-vertical fixed-left navbar-expand-md navbar-light bg-white" id="sidenav-main">
-    <div class="container-fluid">
-        <!-- Toggler -->
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#sidenav-collapse-main" aria-controls="sidenav-main" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <!-- Brand -->
-        <a class="navbar-brand pt-0" href="/home">
+  <div class="container-fluid">
+    <!-- Toggler -->
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#sidenav-collapse-main"
+      aria-controls="sidenav-main" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <!-- Brand -->
+    <a class="navbar-brand pt-0" href="/home">
+    </a>
+    <!-- User -->
+    <ul class="nav align-items-center d-md-none">
+      <li class="nav-item dropdown">
+        <a class="nav-link" href="/profile" role="button" data-toggle="dropdown" aria-haspopup="true"
+          aria-expanded="false">
+          <div class="media align-items-center">
+            <span class="avatar avatar-sm rounded-circle">
+              <!-- <img alt="..." src="#"> -->
+            </span>
+          </div>
         </a>
-        <!-- User -->
-        <ul class="nav align-items-center d-md-none">
-            <li class="nav-item dropdown">
-                <a class="nav-link" href="/profile" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    <div class="media align-items-center">
-                        <span class="avatar avatar-sm rounded-circle">
-                            <!-- <img alt="..." src="#"> -->
-                        </span>
-                    </div>
-                </a>
-                <div class="dropdown-menu dropdown-menu-arrow dropdown-menu-right">
-                    <div class=" dropdown-header noti-title">
-                        <h6 class="text-overflow m-0">Welcome!</h6>
-                    </div>
-                    <a href="/profile" class="dropdown-item">
-                        <i class="ni ni-single-02"></i>
-                        <span>My profile</span>
-                    </a>
-                    <div class="dropdown-divider"></div>
-                    <a href="/logout" class="dropdown-item" onclick="event.preventDefault();">
-                        <i class="ni ni-user-run"></i>
-                        <span>Logout</span>
-                    </a>
-                </div>
-            </li>
-        </ul>
-        <!-- Collapse -->
-        <div class="collapse navbar-collapse" id="sidenav-collapse-main">
-            <!-- Collapse header -->
-            <div class="navbar-collapse-header d-md-none">
-                <div class="row">
-                    <div class="col-6 collapse-brand">
-                        <a href="/home">
-                            <img src="#">
-                        </a>
-                    </div>
-                    <div class="col-6 collapse-close">
-                        <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#sidenav-collapse-main" aria-controls="sidenav-main" aria-expanded="false" aria-label="Toggle sidenav">
-                            <span></span>
-                            <span></span>
-                        </button>
-                    </div>
-                </div>
-            </div>
-            <span></span>
-
-            <span></span>
-
-            <ul class="navbar-nav">
-                <br>
-                <li class="nav-item">
-                    <a class="nav-link" href="/dashboard">
-                        <i class="ni ni-tv-2 text-primary"></i> Dashboard
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/order">
-                        <i class="ni ni-basket text-orange"></i>My Orders
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/address">
-                        <i class="ni ni-shop text-info"></i> Address
-                    </a>
-                </li>
-            </ul>
-
+        <div class="dropdown-menu dropdown-menu-arrow dropdown-menu-right">
+          <div class=" dropdown-header noti-title">
+            <h6 class="text-overflow m-0">Welcome!</h6>
+          </div>
+          <a href="/profile" class="dropdown-item">
+            <i class="ni ni-single-02"></i>
+            <span>My profile</span>
+          </a>
+          <div class="dropdown-divider"></div>
+          <a href="/logout" class="dropdown-item" onclick="event.preventDefault();">
+            <i class="ni ni-user-run"></i>
+            <span>Logout</span>
+          </a>
         </div>
+      </li>
+    </ul>
+    <!-- Collapse -->
+    <div class="collapse navbar-collapse" id="sidenav-collapse-main">
+      <!-- Collapse header -->
+      <div class="navbar-collapse-header d-md-none">
+        <div class="row">
+          <div class="col-6 collapse-brand">
+            <a href="/home">
+              <img src="#">
+            </a>
+          </div>
+          <div class="col-6 collapse-close">
+            <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#sidenav-collapse-main"
+              aria-controls="sidenav-main" aria-expanded="false" aria-label="Toggle sidenav">
+              <span></span>
+              <span></span>
+            </button>
+          </div>
+        </div>
+      </div>
+      <span></span>
+
+      <span></span>
+
+      <ul class="navbar-nav">
+        <br>
+        <li class="nav-item">
+          <a class="nav-link" href="/dashboard">
+            <i class="ni ni-tv-2 text-primary"></i> Dashboard
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/incoming">
+            <i class="ni ni-basket text-orange"></i>Incoming Orders
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/order">
+            <i class="ni ni-basket text-orange"></i>Delivery Orders
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/pickup">
+            <i class="ni ni-basket text-orange"></i>Pickup Orders
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/address">
+            <i class="ni ni-shop text-info"></i> Address
+          </a>
+        </li>
+      </ul>
+
     </div>
+  </div>
 </nav>
 
 <div class="main-content">
-    <!--<div class="header pb-8 pt-5 pt-lg-8 d-flex align-items-center" style="background-image: url(../argon/img/theme/profile-cover.jpg); background-size: cover; background-position: center top;">-->
-    <div class="header pb-8 pt-5 pt-lg-8 d-flex align-items-center" style="background-image: url(assets/default/cover.jpg); background-size: cover; background-position: center top;">
-        <!-- Mask -->
-        <span class="mask bg-gradient-default opacity-2"></span>
-        <nav class="navbar navbar-top navbar-expand-md  navbar-dark" id="navbar-main">
-            <div class="container-fluid">
-                <!-- Brand -->
-                <a class="h4 mb-0 text-white text-uppercase d-none d-lg-inline-block" routerLink="/dashboard">Dashboard</a>
-            </div>
+  <!--<div class="header pb-8 pt-5 pt-lg-8 d-flex align-items-center" style="background-image: url(../argon/img/theme/profile-cover.jpg); background-size: cover; background-position: center top;">-->
+  <div class="header pb-8 pt-5 pt-lg-8 d-flex align-items-center"
+    style="background-image: url(assets/default/cover.jpg); background-size: cover; background-position: center top;">
+    <!-- Mask -->
+    <span class="mask bg-gradient-default opacity-2"></span>
+    <nav class="navbar navbar-top navbar-expand-md  navbar-dark" id="navbar-main">
+      <div class="container-fluid">
+        <!-- Brand -->
+        <a class="h4 mb-0 text-white text-uppercase d-none d-lg-inline-block" routerLink="/dashboard">Dashboard</a>
+      </div>
 
-        </nav>
-    </div>
-    <div class="header pb-8 pt-5 pt-md-8 mt--7">
-        <div class="container-fluid">
-            <div class="header-body">
-                <!-- Card stats -->
-                <div class="row">
-                    <div class="col-xl-3 col-lg-6">
-                        <div class="card card-stats mb-4 mb-xl-0">
-                            <div class="card-body">
-                                <div class="row">
-                                    <div class="col">
-                                        <h6 class="card-title text-uppercase text-muted mb-0">Orders ( 30 days )</h6>
-                                        <span class="h4 font-weight-bold mb-0">138</span>
-                                    </div>
-                                    <div class="col-auto">
-                                        <div class="icon icon-shape bg-yellow text-white rounded-circle shadow">
-                                            <i class="fas fa-shopping-basket"></i>
-                                        </div>
-                                    </div>
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-3 col-lg-6">
-                        <div class="card card-stats mb-4 mb-xl-0">
-                            <div class="card-body">
-                                <div class="row">
-                                    <div class="col">
-                                        <h6 class="card-title text-uppercase text-muted mb-0">Sales Volume ( 30 days )</h6>
-                                        <span class="h4 font-weight-bold mb-0"> $9,073.00</span>
-                                    </div>
-                                    <div class="col-auto">
-                                        <div class="icon icon-shape bg-danger text-white rounded-circle shadow">
-                                            <i class="fas fa-chart-line"></i>
-                                        </div>
-                                    </div>
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-3 col-lg-6">
-                        <div class="card card-stats mb-4 mb-xl-0">
-                            <div class="card-body">
-                                <div class="row">
-                                    <div class="col">
-                                        <h6 class="card-title text-uppercase text-muted mb-0">Orders from</h6>
-                                        <span class="h4 font-weight-bold mb-0">2 Unique users</span>
-                                    </div>
-                                    <div class="col-auto">
-                                        <div class="icon icon-shape bg-warning text-white rounded-circle shadow">
-                                            <i class="fas fa-chart-pie"></i>
-                                        </div>
-                                    </div>
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-xl-3 col-lg-6">
-                        <div class="card card-stats mb-4 mb-xl-0">
-                            <div class="card-body">
-                                <div class="row">
-                                    <div class="col">
-                                        <h6 class="card-title text-uppercase text-muted mb-0">Exposure to</h6>
-                                        <span class="h4 font-weight-bold mb-0">5 Users</span>
-                                    </div>
-                                    <div class="col-auto">
-                                        <div class="icon icon-shape bg-info text-white rounded-circle shadow">
-                                            <i class="fas fa-users"></i>
-                                        </div>
-                                    </div>
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <br>
-                <div class="row">
-                    <div class="col-xl-3 col-lg-6">
-                        <div class="card card-stats mb-4 mb-xl-0">
-                            <div class="card-body">
-                                <div class="row">
-                                    <div class="col">
-                                        <h6 class="card-title text-uppercase text-muted mb-0">Delivery Fee ( 30 days )</h6>
-                                        <span class="h4 font-weight-bold mb-0"> $1,061.00</span>
-                                    </div>
-                                    <div class="col-auto">
-                                        <div class="icon icon-shape bg-yellow text-white rounded-circle shadow">
-                                            <i class="fas fa-truck"></i>
-                                        </div>
-                                    </div>
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-3 col-lg-6">
-                        <div class="card card-stats mb-4 mb-xl-0">
-                            <div class="card-body">
-                                <div class="row">
-                                    <div class="col">
-                                        <h6 class="card-title text-uppercase text-muted mb-0">Static Fee ( 30 days )</h6>
-                                        <span class="h4 font-weight-bold mb-0">$0.00</span>
-                                    </div>
-                                    <div class="col-auto">
-                                        <div class="icon icon-shape bg-danger text-white rounded-circle shadow">
-                                            <i class="fas fa-chart-bar"></i>
-                                        </div>
-                                    </div>
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-3 col-lg-6">
-                        <div class="card card-stats mb-4 mb-xl-0">
-                            <div class="card-body">
-                                <div class="row">
-                                    <div class="col">
-                                        <h6 class="card-title text-uppercase text-muted mb-0">Dynamic Fee ( 30 days )</h6>
-                                        <span class="h4 font-weight-bold mb-0">$0.00</span>
-                                    </div>
-                                    <div class="col-auto">
-                                        <div class="icon icon-shape bg-warning text-white rounded-circle shadow">
-                                            <i class="fas fa-percent"></i>
-                                        </div>
-                                    </div>
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-xl-3 col-lg-6">
-                        <div class="card card-stats mb-4 mb-xl-0">
-                            <div class="card-body">
-                                <div class="row">
-                                    <div class="col">
-                                        <h6 class="card-title text-uppercase text-muted mb-0">Total Fee ( 30 days )</h6>
-                                        <span class="h4 font-weight-bold mb-0">$1,061.00</span>
-                                    </div>
-                                    <div class="col-auto">
-                                        <div class="icon icon-shape bg-info text-white rounded-circle shadow">
-                                            <i class="fas fa-coins"></i>
-                                        </div>
-                                    </div>
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="container-fluid mt--7">
+    </nav>
+  </div>
+  <div class="header pb-8 pt-5 pt-md-8 mt--7">
+    <div class="container-fluid">
+      <div class="header-body">
+        <!-- Card stats -->
         <div class="row">
-            <div class="col-xl-8 mb-5 mb-xl-0">
-                <div class="card bg-gradient-default shadow">
-                    <div class="card-header bg-transparent">
-                        <div class="row align-items-center">
-                            <div class="col">
-                                <h6 class="text-uppercase text-light ls-1 mb-1">Overview</h6>
-                                <h4 class="text-white mb-0">Sales value</h4>
-                            </div>
-
-                        </div>
+          <div class="col-xl-3 col-lg-6">
+            <div class="card card-stats mb-4 mb-xl-0">
+              <div class="card-body">
+                <div class="row">
+                  <div class="col">
+                    <h6 class="card-title text-uppercase text-muted mb-0">Orders ( 30 days )</h6>
+                    <span class="h4 font-weight-bold mb-0">138</span>
+                  </div>
+                  <div class="col-auto">
+                    <div class="icon icon-shape bg-yellow text-white rounded-circle shadow">
+                      <i class="fas fa-shopping-basket"></i>
                     </div>
-
-                    <div class="card-body">
-                        <!-- Chart -->
-                        <div class="chart">
-                            <div class="chartjs-size-monitor" style="position: absolute; left: 0px; top: 0px; right: 0px; bottom: 0px; overflow: hidden; pointer-events: none; visibility: hidden; z-index: -1;">
-                                <div class="chartjs-size-monitor-expand" style="position:absolute;left:0;top:0;right:0;bottom:0;overflow:hidden;pointer-events:none;visibility:hidden;z-index:-1;">
-                                    <div style="position:absolute;width:1000000px;height:1000000px;left:0;top:0"></div>
-                                </div>
-                                <div class="chartjs-size-monitor-shrink" style="position:absolute;left:0;top:0;right:0;bottom:0;overflow:hidden;pointer-events:none;visibility:hidden;z-index:-1;">
-                                    <div style="position:absolute;width:200%;height:200%;left:0; top:0"></div>
-                                </div>
-                            </div>
-                            <!-- Chart wrapper -->
-                            <canvas id="chart-sales" class="chart-canvas chartjs-render-monitor" width="952" height="393" style="display: block; height: 350px; width: 847px;"></canvas>
-                        </div>
-                    </div>
+                  </div>
                 </div>
+
+              </div>
             </div>
-            <div class="col-xl-4">
-                <div class="card shadow">
-                    <div class="card-header bg-transparent">
-                        <div class="row align-items-center">
-                            <div class="col">
-                                <h6 class="text-uppercase text-muted ls-1 mb-1">Performance</h6>
-                                <h4 class="mb-0">Total orders</h4>
-                            </div>
-                        </div>
+          </div>
+          <div class="col-xl-3 col-lg-6">
+            <div class="card card-stats mb-4 mb-xl-0">
+              <div class="card-body">
+                <div class="row">
+                  <div class="col">
+                    <h6 class="card-title text-uppercase text-muted mb-0">Sales Volume ( 30 days )</h6>
+                    <span class="h4 font-weight-bold mb-0"> $9,073.00</span>
+                  </div>
+                  <div class="col-auto">
+                    <div class="icon icon-shape bg-danger text-white rounded-circle shadow">
+                      <i class="fas fa-chart-line"></i>
                     </div>
-                    <div class="card-body">
-                        <!-- Chart -->
-                        <div class="chart">
-                            <div class="chartjs-size-monitor" style="position: absolute; left: 0px; top: 0px; right: 0px; bottom: 0px; overflow: hidden; pointer-events: none; visibility: hidden; z-index: -1;">
-                                <div class="chartjs-size-monitor-expand" style="position:absolute;left:0;top:0;right:0;bottom:0;overflow:hidden;pointer-events:none;visibility:hidden;z-index:-1;">
-                                    <div style="position:absolute;width:1000000px;height:1000000px;left:0;top:0"></div>
-                                </div>
-                                <div class="chartjs-size-monitor-shrink" style="position:absolute;left:0;top:0;right:0;bottom:0;overflow:hidden;pointer-events:none;visibility:hidden;z-index:-1;">
-                                    <div style="position:absolute;width:200%;height:200%;left:0; top:0"></div>
-                                </div>
-                            </div>
-                            <canvas id="chart-orders" class="chart-canvas chartjs-render-monitor" width="430" height="393" style="display: block; height: 350px; width: 383px;"></canvas>
-                        </div>
-                    </div>
+                  </div>
                 </div>
+
+              </div>
             </div>
+          </div>
+          <div class="col-xl-3 col-lg-6">
+            <div class="card card-stats mb-4 mb-xl-0">
+              <div class="card-body">
+                <div class="row">
+                  <div class="col">
+                    <h6 class="card-title text-uppercase text-muted mb-0">Orders from</h6>
+                    <span class="h4 font-weight-bold mb-0">2 Unique users</span>
+                  </div>
+                  <div class="col-auto">
+                    <div class="icon icon-shape bg-warning text-white rounded-circle shadow">
+                      <i class="fas fa-chart-pie"></i>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+          <div class="col-xl-3 col-lg-6">
+            <div class="card card-stats mb-4 mb-xl-0">
+              <div class="card-body">
+                <div class="row">
+                  <div class="col">
+                    <h6 class="card-title text-uppercase text-muted mb-0">Exposure to</h6>
+                    <span class="h4 font-weight-bold mb-0">5 Users</span>
+                  </div>
+                  <div class="col-auto">
+                    <div class="icon icon-shape bg-info text-white rounded-circle shadow">
+                      <i class="fas fa-users"></i>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
         </div>
+        <br>
+        <div class="row">
+          <div class="col-xl-3 col-lg-6">
+            <div class="card card-stats mb-4 mb-xl-0">
+              <div class="card-body">
+                <div class="row">
+                  <div class="col">
+                    <h6 class="card-title text-uppercase text-muted mb-0">Delivery Fee ( 30 days )</h6>
+                    <span class="h4 font-weight-bold mb-0"> $1,061.00</span>
+                  </div>
+                  <div class="col-auto">
+                    <div class="icon icon-shape bg-yellow text-white rounded-circle shadow">
+                      <i class="fas fa-truck"></i>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-3 col-lg-6">
+            <div class="card card-stats mb-4 mb-xl-0">
+              <div class="card-body">
+                <div class="row">
+                  <div class="col">
+                    <h6 class="card-title text-uppercase text-muted mb-0">Static Fee ( 30 days )</h6>
+                    <span class="h4 font-weight-bold mb-0">$0.00</span>
+                  </div>
+                  <div class="col-auto">
+                    <div class="icon icon-shape bg-danger text-white rounded-circle shadow">
+                      <i class="fas fa-chart-bar"></i>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-3 col-lg-6">
+            <div class="card card-stats mb-4 mb-xl-0">
+              <div class="card-body">
+                <div class="row">
+                  <div class="col">
+                    <h6 class="card-title text-uppercase text-muted mb-0">Dynamic Fee ( 30 days )</h6>
+                    <span class="h4 font-weight-bold mb-0">$0.00</span>
+                  </div>
+                  <div class="col-auto">
+                    <div class="icon icon-shape bg-warning text-white rounded-circle shadow">
+                      <i class="fas fa-percent"></i>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+          <div class="col-xl-3 col-lg-6">
+            <div class="card card-stats mb-4 mb-xl-0">
+              <div class="card-body">
+                <div class="row">
+                  <div class="col">
+                    <h6 class="card-title text-uppercase text-muted mb-0">Total Fee ( 30 days )</h6>
+                    <span class="h4 font-weight-bold mb-0">$1,061.00</span>
+                  </div>
+                  <div class="col-auto">
+                    <div class="icon icon-shape bg-info text-white rounded-circle shadow">
+                      <i class="fas fa-coins"></i>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
+  </div>
+  <div class="container-fluid mt--7">
+    <div class="row">
+      <div class="col-xl-8 mb-5 mb-xl-0">
+        <div class="card bg-gradient-default shadow">
+          <div class="card-header bg-transparent">
+            <div class="row align-items-center">
+              <div class="col">
+                <h6 class="text-uppercase text-light ls-1 mb-1">Overview</h6>
+                <h4 class="text-white mb-0">Sales value</h4>
+              </div>
+
+            </div>
+          </div>
+
+          <div class="card-body">
+            <!-- Chart -->
+            <div class="chart">
+              <div class="chartjs-size-monitor"
+                style="position: absolute; left: 0px; top: 0px; right: 0px; bottom: 0px; overflow: hidden; pointer-events: none; visibility: hidden; z-index: -1;">
+                <div class="chartjs-size-monitor-expand"
+                  style="position:absolute;left:0;top:0;right:0;bottom:0;overflow:hidden;pointer-events:none;visibility:hidden;z-index:-1;">
+                  <div style="position:absolute;width:1000000px;height:1000000px;left:0;top:0"></div>
+                </div>
+                <div class="chartjs-size-monitor-shrink"
+                  style="position:absolute;left:0;top:0;right:0;bottom:0;overflow:hidden;pointer-events:none;visibility:hidden;z-index:-1;">
+                  <div style="position:absolute;width:200%;height:200%;left:0; top:0"></div>
+                </div>
+              </div>
+              <!-- Chart wrapper -->
+              <canvas id="chart-sales" class="chart-canvas chartjs-render-monitor" width="952" height="393"
+                style="display: block; height: 350px; width: 847px;"></canvas>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-xl-4">
+        <div class="card shadow">
+          <div class="card-header bg-transparent">
+            <div class="row align-items-center">
+              <div class="col">
+                <h6 class="text-uppercase text-muted ls-1 mb-1">Performance</h6>
+                <h4 class="mb-0">Total orders</h4>
+              </div>
+            </div>
+          </div>
+          <div class="card-body">
+            <!-- Chart -->
+            <div class="chart">
+              <div class="chartjs-size-monitor"
+                style="position: absolute; left: 0px; top: 0px; right: 0px; bottom: 0px; overflow: hidden; pointer-events: none; visibility: hidden; z-index: -1;">
+                <div class="chartjs-size-monitor-expand"
+                  style="position:absolute;left:0;top:0;right:0;bottom:0;overflow:hidden;pointer-events:none;visibility:hidden;z-index:-1;">
+                  <div style="position:absolute;width:1000000px;height:1000000px;left:0;top:0"></div>
+                </div>
+                <div class="chartjs-size-monitor-shrink"
+                  style="position:absolute;left:0;top:0;right:0;bottom:0;overflow:hidden;pointer-events:none;visibility:hidden;z-index:-1;">
+                  <div style="position:absolute;width:200%;height:200%;left:0; top:0"></div>
+                </div>
+              </div>
+              <canvas id="chart-orders" class="chart-canvas chartjs-render-monitor" width="430" height="393"
+                style="display: block; height: 350px; width: 383px;"></canvas>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
 </div>
-<div id="chart-tooltip" class="popover bs-popover-top" role="tooltip" style="top: 593.028px; left: 853.792px; display: none; z-index: 100;">
-    <div class="arrow"></div>
-    <h3 class="popover-header text-center">May</h3>
-    <div class="popover-body d-flex align-items-center justify-content-center"><span class="badge badge-dot"><i class="bg-primary"></i></span><span class="popover-body-value">3226</span></div>
+<div id="chart-tooltip" class="popover bs-popover-top" role="tooltip"
+  style="top: 593.028px; left: 853.792px; display: none; z-index: 100;">
+  <div class="arrow"></div>
+  <h3 class="popover-header text-center">May</h3>
+  <div class="popover-body d-flex align-items-center justify-content-center"><span class="badge badge-dot"><i
+        class="bg-primary"></i></span><span class="popover-body-value">3226</span></div>
 </div>

@@ -1,0 +1,66 @@
+<button printSectionId="printdiv" style="margin-top: 125px" ngxPrint>Print</button>
+
+<div *ngIf="loading" style="margin: 30px">
+  <mat-progress-bar mode="indeterminate">
+  </mat-progress-bar>
+</div>
+<div class="main-content" id="printdiv" *ngIf="order" style="margin: 10px;font-family: revert;">
+  <style>
+    h2,
+    p,
+    li {
+      font-family: sans-serif;
+    }
+  </style>
+  <h1><img src="https://fiwe-app-images-prod.s3.ap-south-1.amazonaws.com/app-images/app-header-icon.png" alt=""
+      width="65" height="47" />FIWE</h1>
+  <h2>Order Summary</h2>
+  <ul>
+    <li>Order#:{{order.orderCode}}</li>
+    <li>Date: {{getLocalTime(order.time)}}</li>
+    <li>Total price: {{order.finalPrice | currency : 'INR'}}</li>
+    <li>Delivery Type:
+      <span *ngIf="order.isPickUp">Pickup</span>
+      <span *ngIf="!order.isPickUp">Home Delivery, {{order.deliverySpeed | uppercase}}</span>
+    </li>
+    <li *ngIf="order.isPickUp">Pickup Time: {{getLocalTime(order.pickUpTime)}}</li>
+  </ul>
+
+  <h2>Address</h2>
+  <p style="width: 80%;">{{order.deliveryAddress}}</p>
+
+  <h2>Products</h2>
+  <table style="width: 599px; height: 65px;" border="1px" *ngIf="orderItem">
+    <tbody>
+      <tr style="height: 24px;">
+        <td style="width: 230.3px; text-align: center; height: 24px;">Name</td>
+        <td style="width: 123.7px; text-align: center; height: 24px;">Price</td>
+        <td style="width: 81px; text-align: center; height: 24px;">Quantity</td>
+        <td style="width: 60px; text-align: center; height: 24px;">Status</td>
+        <td style="width: 180px; text-align: center; height: 24px;">Remarks</td>
+      </tr>
+    </tbody>
+  </table>
+  <table *ngFor="let i of orderItem">
+    <tbody>
+
+      <tr style="height: 41.4334px;">
+        <td style="width: 230.3px; height: 41.4334px;">
+          <h3>{{i.categoryCode}}</h3>
+        </td>
+        <td style="width: 123.7px; height: 41.4334px;">&nbsp;</td>
+        <td style="width: 81px; height: 41.4334px;">&nbsp;</td>
+        <td style="width: 60px; height: 41.4334px;">&nbsp;</td>
+        <td style="width: 180px; height: 41.4334px;">&nbsp;</td>
+      </tr>
+      <tr style="height: 41.4334px;" *ngFor="let p of i.orderItem">
+        <td style="width: 230.3px; height: 41.4334px;">{{p.title}}</td>
+        <td style="width: 123.7px; height: 41.4334px; text-align: center;">{{p.sellPrice | currency : 'INR'}}</td>
+        <td style="width: 81px; height: 41.4334px; text-align: center;">{{p.quantity}}</td>
+        <td style="width: 60px; height: 41.4334px; text-align: center;">&nbsp;</td>
+        <td style="width: 180px; height: 41.4334px;">&nbsp;</td>
+      </tr>
+    </tbody>
+  </table>
+  <p>&nbsp;</p>
+</div>

@@ -6,10 +6,10 @@ import { Routes, RouterModule } from '@angular/router';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'foodholic';
+  title = 'fiwe';
 
   onActivate(event) {
     window.scroll(0,0);
-    
+
   }
 }
